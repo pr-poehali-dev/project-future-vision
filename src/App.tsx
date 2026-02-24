@@ -31,7 +31,8 @@ const periods = [
   {
     days: 14,
     label: "14 дней",
-    bonus: "+0,5% к тарифу",
+    bonus: "базовый тариф",
+    bonusPercent: 0,
     weekend: "0,5% в выходные",
     desc: "Оптимально для первого входа",
   },
@@ -39,13 +40,15 @@ const periods = [
     days: 28,
     label: "28 дней",
     bonus: "+1% к тарифу",
+    bonusPercent: 1,
     weekend: "0,5% в выходные",
     desc: "Сбалансированный доход",
   },
   {
     days: 42,
     label: "42 дня",
-    bonus: "+1,5% к тарифу",
+    bonus: "+2% к тарифу",
+    bonusPercent: 2,
     weekend: "0,5% в выходные",
     desc: "Максимальная прибыль",
   },
@@ -67,7 +70,7 @@ export default function App() {
 
   const minDaily = parseFloat(tariff.daily.split(" — ")[0].replace(",", "."));
   const maxDaily = parseFloat(tariff.daily.split(" — ")[1].replace(",", "."));
-  const bonusPercent = parseFloat(period.bonus.replace("+", "").replace("% к тарифу", "").replace(",", "."));
+  const bonusPercent = period.bonusPercent;
   const amount = parseInt(tariff.amount.replace(/\D/g, ""));
 
   const minProfit = ((minDaily + bonusPercent) / 100) * amount * period.days;
