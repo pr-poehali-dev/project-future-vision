@@ -1,3 +1,16 @@
-# project-future-vision
+# ЗолотойКапитал — инвестиционный клуб
 
-Initial repository setup for pr-poehali-dev/project-future-vision
+![Preview](https://cdn.poehali.dev/templates/investment-collective-ru/preview-ru.jpg)
+
+Элегантный лендинг для инвестиционной компании или частного клуба инвесторов. Тёмная тема в стиле арт-деко с золотыми акцентами создаёт атмосферу эксклюзивности и премиальности. Подойдёт для финансовых услуг, wealth management, приватных клубов.
+
+Включает:
+- Hero с философией компании
+- Направления инвестиций
+- Отзыв клиента
+- Форма заявки на членство
+- Арт-деко декоративные элементы
+
+```
+"tags": ["landing", "dark", "fintech"]
+```
